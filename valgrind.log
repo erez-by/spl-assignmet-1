@@ -1,0 +1,160 @@
+==47521== Memcheck, a memory error detector
+==47521== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==47521== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==47521== Command: ./bin/dj_manager
+==47521== Parent PID: 586
+==47521== 
+==47521== 
+==47521== HEAP SUMMARY:
+==47521==     in use at exit: 64,544 bytes in 18 blocks
+==47521==   total heap usage: 40 allocs, 22 frees, 140,040 bytes allocated
+==47521== 
+==47521== 16 bytes in 1 blocks are indirectly lost in loss record 1 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x1173C8: Playlist::add_track(AudioTrack*) (Playlist.cpp:24)
+==47521==    by 0x11F495: test_phase_1_memory_leaks() (main.cpp:41)
+==47521==    by 0x1211F6: main (main.cpp:190)
+==47521== 
+==47521== 32 bytes in 1 blocks are indirectly lost in loss record 2 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10CF39: std::__new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (new_allocator.h:147)
+==47521==    by 0x10C994: allocate (alloc_traits.h:482)
+==47521==    by 0x10C994: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (stl_vector.h:378)
+==47521==    by 0x10C7C0: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (stl_vector.h:395)
+==47521==    by 0x10C3EA: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (stl_vector.h:332)
+==47521==    by 0x10C106: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (stl_vector.h:600)
+==47521==    by 0x10BB54: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:8)
+==47521==    by 0x117084: MP3Track::MP3Track(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, bool) (MP3Track.cpp:8)
+==47521==    by 0x11F2BE: test_phase_1_memory_leaks() (main.cpp:34)
+==47521==    by 0x1211F6: main (main.cpp:190)
+==47521== 
+==47521== 32 bytes in 1 blocks are indirectly lost in loss record 3 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10CF39: std::__new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (new_allocator.h:147)
+==47521==    by 0x10C994: allocate (alloc_traits.h:482)
+==47521==    by 0x10C994: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (stl_vector.h:378)
+==47521==    by 0x10C7C0: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (stl_vector.h:395)
+==47521==    by 0x10C3EA: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (stl_vector.h:332)
+==47521==    by 0x10C106: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (stl_vector.h:600)
+==47521==    by 0x10BB54: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:8)
+==47521==    by 0x11EFAE: WAVTrack::WAVTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, int) (WAVTrack.cpp:6)
+==47521==    by 0x11F3A8: test_phase_1_memory_leaks() (main.cpp:35)
+==47521==    by 0x1211F6: main (main.cpp:190)
+==47521== 
+==47521== 32 bytes in 1 blocks are indirectly lost in loss record 4 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10CF39: std::__new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (new_allocator.h:147)
+==47521==    by 0x10C994: allocate (alloc_traits.h:482)
+==47521==    by 0x10C994: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (stl_vector.h:378)
+==47521==    by 0x10C7C0: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (stl_vector.h:395)
+==47521==    by 0x10C3EA: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (stl_vector.h:332)
+==47521==    by 0x10C106: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (stl_vector.h:600)
+==47521==    by 0x10BB54: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:8)
+==47521==    by 0x117084: MP3Track::MP3Track(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, bool) (MP3Track.cpp:8)
+==47521==    by 0x1200B6: test_phase_3() (main.cpp:101)
+==47521==    by 0x121200: main (main.cpp:192)
+==47521== 
+==47521== 32 bytes in 1 blocks are indirectly lost in loss record 5 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10CF39: std::__new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (new_allocator.h:147)
+==47521==    by 0x10C994: allocate (alloc_traits.h:482)
+==47521==    by 0x10C994: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (stl_vector.h:378)
+==47521==    by 0x10C7C0: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_storage(unsigned long) (stl_vector.h:395)
+==47521==    by 0x10C3EA: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Vector_base(unsigned long, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) (stl_vector.h:332)
+==47521==    by 0x10C106: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (stl_vector.h:600)
+==47521==    by 0x10BB54: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:8)
+==47521==    by 0x117084: MP3Track::MP3Track(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, bool) (MP3Track.cpp:8)
+==47521==    by 0x1203E1: test_phase_3() (main.cpp:118)
+==47521==    by 0x121200: main (main.cpp:192)
+==47521== 
+==47521== 96 bytes in 1 blocks are indirectly lost in loss record 6 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x11F221: test_phase_1_memory_leaks() (main.cpp:34)
+==47521==    by 0x1211F6: main (main.cpp:190)
+==47521== 
+==47521== 96 bytes in 1 blocks are indirectly lost in loss record 7 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x11F30B: test_phase_1_memory_leaks() (main.cpp:35)
+==47521==    by 0x1211F6: main (main.cpp:190)
+==47521== 
+==47521== 8,000 bytes in 1 blocks are indirectly lost in loss record 8 of 18
+==47521==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10BBAC: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:12)
+==47521==    by 0x117084: MP3Track::MP3Track(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, bool) (MP3Track.cpp:8)
+==47521==    by 0x11F2BE: test_phase_1_memory_leaks() (main.cpp:34)
+==47521==    by 0x1211F6: main (main.cpp:190)
+==47521== 
+==47521== 8,000 bytes in 1 blocks are indirectly lost in loss record 9 of 18
+==47521==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10BBAC: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:12)
+==47521==    by 0x11EFAE: WAVTrack::WAVTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, int) (WAVTrack.cpp:6)
+==47521==    by 0x11F3A8: test_phase_1_memory_leaks() (main.cpp:35)
+==47521==    by 0x1211F6: main (main.cpp:190)
+==47521== 
+==47521== 8,000 bytes in 1 blocks are indirectly lost in loss record 10 of 18
+==47521==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10BBAC: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:12)
+==47521==    by 0x117084: MP3Track::MP3Track(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, bool) (MP3Track.cpp:8)
+==47521==    by 0x1200B6: test_phase_3() (main.cpp:101)
+==47521==    by 0x121200: main (main.cpp:192)
+==47521== 
+==47521== 8,000 bytes in 1 blocks are indirectly lost in loss record 11 of 18
+==47521==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10BBAC: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:12)
+==47521==    by 0x117084: MP3Track::MP3Track(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, bool) (MP3Track.cpp:8)
+==47521==    by 0x1203E1: test_phase_3() (main.cpp:118)
+==47521==    by 0x121200: main (main.cpp:192)
+==47521== 
+==47521== 8,000 bytes in 1 blocks are definitely lost in loss record 12 of 18
+==47521==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10BBAC: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:12)
+==47521==    by 0x117084: MP3Track::MP3Track(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, bool) (MP3Track.cpp:8)
+==47521==    by 0x11F906: test_phase_2_rule_of_5() (main.cpp:67)
+==47521==    by 0x1211FB: main (main.cpp:191)
+==47521== 
+==47521== 8,000 bytes in 1 blocks are definitely lost in loss record 13 of 18
+==47521==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10BBAC: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:12)
+==47521==    by 0x117084: MP3Track::MP3Track(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, bool) (MP3Track.cpp:8)
+==47521==    by 0x11FAEE: test_phase_2_rule_of_5() (main.cpp:75)
+==47521==    by 0x1211FB: main (main.cpp:191)
+==47521== 
+==47521== 8,000 bytes in 1 blocks are definitely lost in loss record 14 of 18
+==47521==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10BBAC: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:12)
+==47521==    by 0x117084: MP3Track::MP3Track(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, bool) (MP3Track.cpp:8)
+==47521==    by 0x1208E4: demonstrate_polymorphism() (main.cpp:142)
+==47521==    by 0x121205: main (main.cpp:193)
+==47521== 
+==47521== 8,000 bytes in 1 blocks are definitely lost in loss record 15 of 18
+==47521==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x10BBAC: AudioTrack::AudioTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, unsigned long) (AudioTrack.cpp:12)
+==47521==    by 0x11EFAE: WAVTrack::WAVTrack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, int, int, int, int) (WAVTrack.cpp:6)
+==47521==    by 0x120A07: demonstrate_polymorphism() (main.cpp:143)
+==47521==    by 0x121205: main (main.cpp:193)
+==47521== 
+==47521== 8,128 (96 direct, 8,032 indirect) bytes in 1 blocks are definitely lost in loss record 16 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x120011: test_phase_3() (main.cpp:101)
+==47521==    by 0x121200: main (main.cpp:192)
+==47521== 
+==47521== 8,128 (96 direct, 8,032 indirect) bytes in 1 blocks are definitely lost in loss record 17 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x12033F: test_phase_3() (main.cpp:118)
+==47521==    by 0x121200: main (main.cpp:192)
+==47521== 
+==47521== 16,288 (16 direct, 16,272 indirect) bytes in 1 blocks are definitely lost in loss record 18 of 18
+==47521==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==47521==    by 0x1173C8: Playlist::add_track(AudioTrack*) (Playlist.cpp:24)
+==47521==    by 0x11F4AE: test_phase_1_memory_leaks() (main.cpp:42)
+==47521==    by 0x1211F6: main (main.cpp:190)
+==47521== 
+==47521== LEAK SUMMARY:
+==47521==    definitely lost: 32,208 bytes in 7 blocks
+==47521==    indirectly lost: 32,336 bytes in 11 blocks
+==47521==      possibly lost: 0 bytes in 0 blocks
+==47521==    still reachable: 0 bytes in 0 blocks
+==47521==         suppressed: 0 bytes in 0 blocks
+==47521== 
+==47521== For lists of detected and suppressed errors, rerun with: -s
+==47521== ERROR SUMMARY: 7 errors from 7 contexts (suppressed: 0 from 0)

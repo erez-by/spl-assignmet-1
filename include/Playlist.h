@@ -20,7 +20,10 @@ struct PlaylistNode {
     PlaylistNode* next;
 
     PlaylistNode(AudioTrack* t) : track(t), next(nullptr) {}
-    ~PlaylistNode() = default;
+    ~PlaylistNode(){
+        delete track;
+    };
+    // we will need to make it so that the palylist node destroyer will destroy the pointers
 };
 
 class Playlist {
